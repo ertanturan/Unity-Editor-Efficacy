@@ -75,11 +75,6 @@ namespace EditorUtility.Core
         #endregion
 
         #region Level Tools
-        [MenuItem("Editor Utility/Level Tools/Vertex Painter")]
-        public static void LaunchVertexPainter()
-        {
-            VertexPainterWindow.LaunchVertexPainter();
-        }
 
         [MenuItem("Editor Utility/Level Tools/Export Selected to Single OBJ")]
         public static void ExportSelectedToOBJ()

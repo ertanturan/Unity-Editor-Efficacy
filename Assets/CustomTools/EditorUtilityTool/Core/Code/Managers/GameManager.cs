@@ -12,8 +12,6 @@ namespace EditorUtility.Core
         public bool m_IsVREnabled = false;
         #endregion
 
-
-
         #region Methods
         public static GameManager Instance
         {
@@ -47,9 +45,6 @@ namespace EditorUtility.Core
             }
         }
         #endregion
-
-
-
 
         #region Utility Methods
         void CheckVRSettings()
