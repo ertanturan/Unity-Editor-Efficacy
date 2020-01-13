@@ -8,11 +8,11 @@ namespace EditorUtility.Core
         public static void CreateUIGroup()
         {
             GameObject selectedGO = EditorUtils.GetSelectedObject();
-            GameObject uiGrp = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/CustomTools/EditorUtilityTool/UI/Prefabs/UI_GRP.prefab", typeof(GameObject));
+            GameObject uiGrp = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/CustomTools/EditorUtilityTool/UI/Prefabs/UI_Group.prefab", typeof(GameObject));
             if (uiGrp)
             {
                 GameObject curUIGrp = GameObject.Instantiate(uiGrp);
-                curUIGrp.name = "UI_GRP";
+                curUIGrp.name = "UI_Group";
 
                 if (selectedGO)
                 {
@@ -21,7 +21,7 @@ namespace EditorUtility.Core
             }
             else
             {
-                EditorUtils.DisplayDialogBox("Unable to Find the UI_GRP Prefab!");
+                EditorUtils.DisplayDialogBox("Unable to Find the UI Group Prefab!");
             }
         }
     }

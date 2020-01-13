@@ -95,6 +95,7 @@ namespace EditorUtility.Core
                 afolderList.Add("Audio/FX");
                 afolderList.Add("Audio/Mixers");
                 afolderList.Add("Fonts");
+                afolderList.Add("Video");
                 afolderList.Add("Materials");
                 afolderList.Add("Objects");
                 afolderList.Add("Textures");
@@ -148,15 +149,12 @@ namespace EditorUtility.Core
 
             rootInfo = Directory.CreateDirectory(aRootFolder + "/" + "Utilities");
 
-
             if (rootInfo.Exists)
             {
                 afolderList.Clear();
                 afolderList.Add("Sprite Atlas");
                 CreateSubFolders(aRootFolder + "/" + "Utilities", afolderList);
             }
-
-
 
             DirectoryInfo sceneDir = Directory.CreateDirectory(aRootFolder + "/" + "Scenes");
             //Debug.Log(sceneDir.FullName);
