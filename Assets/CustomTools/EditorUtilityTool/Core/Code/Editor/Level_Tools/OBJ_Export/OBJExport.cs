@@ -212,8 +212,6 @@ namespace EditorUtility.Core
 
             return true;
         }
-
-
         //        [MenuItem ("GameGlu/Export/Export whole selection to single OBJ")]
         public static void ExportWholeSelectionToSingle()
         {
@@ -264,7 +262,6 @@ namespace EditorUtility.Core
 
                     MeshesToFile(mf, targetFolder, filename);
 
-
                     UnityEditor.EditorUtility.DisplayDialog("Objects exported", "Exported " + exportedObjects + " objects to " + filename, "");
                 }
                 else
@@ -273,8 +270,6 @@ namespace EditorUtility.Core
                 }
             }
         }
-
-
 
         //        [MenuItem ("GameGlu/Export/Export each selected to single OBJ")]
         public static void ExportEachSelectionToSingle()

@@ -26,9 +26,6 @@ namespace EditorUtility.Core
             SceneHelpers.CreateGameManager();
         }
 
-
-
-
         [MenuItem("Editor Utility/Scene Tools/Group Selected")]
         public static void GroupSelectedGameObjects()
         {
@@ -40,8 +37,6 @@ namespace EditorUtility.Core
         {
             GroupingWindow.InitWindow();
         }
-
-
 
         [MenuItem("Editor Utility/Scene Tools/Object Replacement")]
         public static void ReplaceSelectedGameObjects()
@@ -75,7 +70,6 @@ namespace EditorUtility.Core
         #endregion
 
         #region Level Tools
-
         [MenuItem("Editor Utility/Level Tools/Export Selected to Single OBJ")]
         public static void ExportSelectedToOBJ()
         {

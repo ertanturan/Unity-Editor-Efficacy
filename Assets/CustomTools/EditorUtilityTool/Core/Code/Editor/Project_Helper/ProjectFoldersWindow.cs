@@ -16,8 +16,6 @@ namespace EditorUtility.Core
         string m_dialogName = "Project Setup";
         #endregion
 
-
-
         #region Main Methods
         public static void InitWindow()
         {
@@ -25,7 +23,7 @@ namespace EditorUtility.Core
             m_Win.Show();
         }
 
-        void OnGUI()
+        private void OnGUI()
         {
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("Game Name: ", EditorStyles.boldLabel);
@@ -47,9 +45,8 @@ namespace EditorUtility.Core
         }
         #endregion
 
-
         #region Custom Methods
-        void CreateRootFolder()
+        private void CreateRootFolder()
         {
             if (m_wantedRootName == "" || m_wantedRootName == null)
             {
@@ -83,7 +80,7 @@ namespace EditorUtility.Core
             }
         }
 
-        void CreatSubDirectories(string aRootFolder)
+        private void CreatSubDirectories(string aRootFolder)
         {
             DirectoryInfo rootInfo = null;
             List<string> afolderList = new List<string>();
@@ -107,7 +104,9 @@ namespace EditorUtility.Core
             {
                 afolderList.Clear();
                 afolderList.Add("Editor");
+                afolderList.Add("Editor/Abstract");
                 afolderList.Add("Scripts");
+                afolderList.Add("Scripts/Abstract");
                 afolderList.Add("Shaders");
                 CreateSubFolders(aRootFolder + "/" + "Code", afolderList);
             }
@@ -116,6 +115,7 @@ namespace EditorUtility.Core
             if (rootInfo.Exists)
             {
                 afolderList.Clear();
+                afolderList.Add("Data");
                 afolderList.Add("Characters");
                 afolderList.Add("Managers");
                 afolderList.Add("Props");
@@ -130,7 +130,10 @@ namespace EditorUtility.Core
                 afolderList.Add("Characters");
                 afolderList.Add("Props");
                 afolderList.Add("UI");
+                CreateSubFolders(aRootFolder + "/" + "Prefabs", afolderList);
             }
+
+            rootInfo = Directory.CreateDirectory(aRootFolder + "/" + "Utilities");
 
             DirectoryInfo sceneDir = Directory.CreateDirectory(aRootFolder + "/" + "Scenes");
             //Debug.Log(sceneDir.FullName);
@@ -147,7 +150,7 @@ namespace EditorUtility.Core
 
         }
 
-        void CreateSubFolders(string aRootFolder, List<string> subFolders)
+        private void CreateSubFolders(string aRootFolder, List<string> subFolders)
         {
             foreach (string aFolder in subFolders)
             {
@@ -155,7 +158,7 @@ namespace EditorUtility.Core
             }
         }
 
-        void DialogDisplay(string aMessage)
+        private void DialogDisplay(string aMessage)
         {
             UnityEditor.EditorUtility.DisplayDialog(m_dialogName + "Warning", aMessage, "OK");
         }
