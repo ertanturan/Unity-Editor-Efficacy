@@ -91,6 +91,9 @@ namespace EditorUtility.Core
                 afolderList.Clear();
                 afolderList.Add("Animation");
                 afolderList.Add("Audio");
+                afolderList.Add("Audio/Source");
+                afolderList.Add("Audio/FX");
+                afolderList.Add("Audio/Mixers");
                 afolderList.Add("Fonts");
                 afolderList.Add("Materials");
                 afolderList.Add("Objects");
@@ -104,10 +107,18 @@ namespace EditorUtility.Core
             {
                 afolderList.Clear();
                 afolderList.Add("Editor");
-                afolderList.Add("Editor/Abstract");
+                afolderList.Add("Editor/Abstracts");
                 afolderList.Add("Scripts");
-                afolderList.Add("Scripts/Abstract");
+                afolderList.Add("Scripts/Abstracts");
+                afolderList.Add("Scripts/Enumeration");
+                afolderList.Add("Scripts/Scriptable Objects");
+                afolderList.Add("Scripts/Audio");
+                afolderList.Add("Scripts/UI");
+                afolderList.Add("Scripts/Features");
+                afolderList.Add("Scripts/Gameplay");
+                afolderList.Add("Scripts/Input");
                 afolderList.Add("Shaders");
+                afolderList.Add("Tests");
                 CreateSubFolders(aRootFolder + "/" + "Code", afolderList);
             }
 
@@ -130,10 +141,22 @@ namespace EditorUtility.Core
                 afolderList.Add("Characters");
                 afolderList.Add("Props");
                 afolderList.Add("UI");
+                afolderList.Add("Environment");
+                afolderList.Add("Level");
                 CreateSubFolders(aRootFolder + "/" + "Prefabs", afolderList);
             }
 
             rootInfo = Directory.CreateDirectory(aRootFolder + "/" + "Utilities");
+
+
+            if (rootInfo.Exists)
+            {
+                afolderList.Clear();
+                afolderList.Add("Sprite Atlas");
+                CreateSubFolders(aRootFolder + "/" + "Utilities", afolderList);
+            }
+
+
 
             DirectoryInfo sceneDir = Directory.CreateDirectory(aRootFolder + "/" + "Scenes");
             //Debug.Log(sceneDir.FullName);
