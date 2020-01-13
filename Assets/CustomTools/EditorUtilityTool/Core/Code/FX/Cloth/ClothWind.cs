@@ -6,25 +6,25 @@ namespace EditorUtility.Core
     public class ClothWind : MonoBehaviour
     {
         #region Variables
-        public WindZone m_WindZone;
+        public WindZone WindZone;
 
-        private Cloth clothComponent;
+        private Cloth _clothComponent;
         #endregion
 
         #region Main Methods
         // Use this for initialization
-        void Start()
+        private void Start()
         {
-            clothComponent = GetComponent<Cloth>();
+            _clothComponent = GetComponent<Cloth>();
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            if (m_WindZone && clothComponent)
+            if (WindZone && _clothComponent)
             {
                 var randPos = Mathf.Abs(Mathf.Sin(Time.time * transform.position.x) * Time.deltaTime * 10f);
-                clothComponent.externalAcceleration = (m_WindZone.transform.forward * m_WindZone.windPulseMagnitude * m_WindZone.windTurbulence) * (m_WindZone.windMain * Mathf.Abs(Mathf.Sin(Time.time)) * randPos);
+                _clothComponent.externalAcceleration = (WindZone.transform.forward * WindZone.windPulseMagnitude * WindZone.windTurbulence) * (WindZone.windMain * Mathf.Abs(Mathf.Sin(Time.time)) * randPos);
             }
         }
         #endregion

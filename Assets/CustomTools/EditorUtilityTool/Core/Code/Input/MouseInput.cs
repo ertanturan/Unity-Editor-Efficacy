@@ -6,49 +6,48 @@ namespace EditorUtility.Core
     public class MouseInput : MonoBehaviour
     {
         #region Variables
-        public MouseButtonInfo m_LeftMouseButton = new MouseButtonInfo();
-        public MouseButtonInfo m_MiddleMouseButton = new MouseButtonInfo();
-        public MouseButtonInfo m_RightmouseButton = new MouseButtonInfo();
+        public MouseButtonInfo LeftMouseButton = new MouseButtonInfo();
+        public MouseButtonInfo MiddleMouseButton = new MouseButtonInfo();
+        public MouseButtonInfo RightmouseButton = new MouseButtonInfo();
 
-        private Vector2 mousePosition;
+        private Vector2 _mousePosition;
         public Vector2 MousePostion
         {
-            get { return mousePosition; }
+            get { return _mousePosition; }
         }
 
-        private Vector2 mouseDelta;
+        private Vector2 _mouseDelta;
         public Vector2 MouseDelta
         {
-            get { return mouseDelta; }
+            get { return _mouseDelta; }
         }
 
-        private float zoomDelta;
+        private float _zoomDelta;
         public float ZoomDelta
         {
-            get { return zoomDelta; }
+            get { return _zoomDelta; }
         }
 
         [Header("Mouse Events")]
-        public UnityEvent onLeftButtonDown = new UnityEvent();
-        public UnityEvent onLeftButtonUp = new UnityEvent();
+        public UnityEvent OnLeftButtonDown = new UnityEvent();
+        public UnityEvent OnLeftButtonUp = new UnityEvent();
 
-        public UnityEvent onMiddleButtonDown = new UnityEvent();
-        public UnityEvent onMiddleButtonUp = new UnityEvent();
+        public UnityEvent OnMiddleButtonDown = new UnityEvent();
+        public UnityEvent OnMiddleButtonUp = new UnityEvent();
 
-        public UnityEvent onRightButtonDown = new UnityEvent();
-        public UnityEvent onRightButtonUp = new UnityEvent();
+        public UnityEvent OnRightButtonDown = new UnityEvent();
+        public UnityEvent OnRightButtonUp = new UnityEvent();
         #endregion
-
 
         #region Main Methods
         // Use this for initialization
-        void Start()
+        private void Start()
         {
             InitializeInputs();
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             HandleButtonEvents();
             HandleMousePositionData();
@@ -57,63 +56,64 @@ namespace EditorUtility.Core
 
         #region Custom Methods
         protected virtual void InitializeInputs() { }
+
         protected virtual void HandleButtonEvents()
         {
             //Left Mouse Button Events
-            m_LeftMouseButton.buttonDown = Input.GetMouseButtonDown(0);
-            m_LeftMouseButton.buttonHeld = Input.GetMouseButton(0);
-            m_LeftMouseButton.buttonUp = Input.GetMouseButtonUp(0);
+            LeftMouseButton.ButtonDown = Input.GetMouseButtonDown(0);
+            LeftMouseButton.ButtonHeld = Input.GetMouseButton(0);
+            LeftMouseButton.ButtonUp = Input.GetMouseButtonUp(0);
 
-            if (onLeftButtonDown != null && m_LeftMouseButton.buttonDown)
+            if (OnLeftButtonDown != null && LeftMouseButton.ButtonDown)
             {
-                onLeftButtonDown.Invoke();
+                OnLeftButtonDown.Invoke();
             }
 
-            if (onLeftButtonDown != null && m_LeftMouseButton.buttonUp)
+            if (OnLeftButtonDown != null && LeftMouseButton.ButtonUp)
             {
-                onLeftButtonUp.Invoke();
+                OnLeftButtonUp.Invoke();
             }
 
 
 
             //Middle Mouse Button Events
-            m_MiddleMouseButton.buttonDown = Input.GetMouseButtonDown(2);
-            m_MiddleMouseButton.buttonHeld = Input.GetMouseButton(2);
-            m_MiddleMouseButton.buttonUp = Input.GetMouseButtonUp(2);
-            zoomDelta = Input.GetAxis("Mouse ScrollWheel");
+            MiddleMouseButton.ButtonDown = Input.GetMouseButtonDown(2);
+            MiddleMouseButton.ButtonHeld = Input.GetMouseButton(2);
+            MiddleMouseButton.ButtonUp = Input.GetMouseButtonUp(2);
+            _zoomDelta = Input.GetAxis("Mouse ScrollWheel");
 
-            if (onMiddleButtonDown != null && m_MiddleMouseButton.buttonDown)
+            if (OnMiddleButtonDown != null && MiddleMouseButton.ButtonDown)
             {
-                onMiddleButtonDown.Invoke();
+                OnMiddleButtonDown.Invoke();
             }
 
-            if (onMiddleButtonUp != null && m_MiddleMouseButton.buttonUp)
+            if (OnMiddleButtonUp != null && MiddleMouseButton.ButtonUp)
             {
-                onMiddleButtonUp.Invoke();
+                OnMiddleButtonUp.Invoke();
             }
 
 
 
             //Right Mouse Button Events
-            m_RightmouseButton.buttonDown = Input.GetMouseButtonDown(1);
-            m_RightmouseButton.buttonHeld = Input.GetMouseButton(1);
-            m_RightmouseButton.buttonUp = Input.GetMouseButtonUp(1);
+            RightmouseButton.ButtonDown = Input.GetMouseButtonDown(1);
+            RightmouseButton.ButtonHeld = Input.GetMouseButton(1);
+            RightmouseButton.ButtonUp = Input.GetMouseButtonUp(1);
 
-            if (onRightButtonDown != null && m_RightmouseButton.buttonDown)
+            if (OnRightButtonDown != null && RightmouseButton.ButtonDown)
             {
-                onRightButtonDown.Invoke();
+                OnRightButtonDown.Invoke();
             }
 
-            if (onRightButtonUp != null && m_RightmouseButton.buttonUp)
+            if (OnRightButtonUp != null && RightmouseButton.ButtonUp)
             {
-                onRightButtonUp.Invoke();
+                OnRightButtonUp.Invoke();
             }
         }
 
         protected virtual void HandleMousePositionData()
         {
-            mousePosition = Input.mousePosition;
-            mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            _mousePosition = Input.mousePosition;
+            _mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }
         #endregion
     }
@@ -122,9 +122,9 @@ namespace EditorUtility.Core
     #region Button Info Struct
     public struct MouseButtonInfo
     {
-        public bool buttonDown;
-        public bool buttonHeld;
-        public bool buttonUp;
+        public bool ButtonDown;
+        public bool ButtonHeld;
+        public bool ButtonUp;
     }
     #endregion
 }

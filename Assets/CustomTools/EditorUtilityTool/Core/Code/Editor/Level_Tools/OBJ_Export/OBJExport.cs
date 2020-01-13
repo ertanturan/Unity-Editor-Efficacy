@@ -18,14 +18,14 @@ namespace EditorUtility.Core
     public class OBJExport : ScriptableObject
     {
         #region Variables
-        private static int vertexOffset = 0;
-        private static int normalOffset = 0;
-        private static int uvOffset = 0;
+        private static int _vertexOffset = 0;
+        private static int _normalOffset = 0;
+        private static int _uvOffset = 0;
 
 
         //User should probably be able to change this. It is currently left as an excercise for
         //the reader.
-        private static string targetFolder = "ExportedObj";
+        private static string _targetFolder = "ExportedObj";
         #endregion
 
         #region Methods
@@ -91,22 +91,22 @@ namespace EditorUtility.Core
                 {
                     //Because we inverted the x-component, we also needed to alter the triangle winding.
                     sb.Append(string.Format("f {1}/{1}/{1} {0}/{0}/{0} {2}/{2}/{2}\n",
-                        triangles[i] + 1 + vertexOffset, triangles[i + 1] + 1 + normalOffset, triangles[i + 2] + 1 + uvOffset));
+                        triangles[i] + 1 + _vertexOffset, triangles[i + 1] + 1 + _normalOffset, triangles[i + 2] + 1 + _uvOffset));
                 }
             }
 
-            vertexOffset += m.vertices.Length;
-            normalOffset += m.normals.Length;
-            uvOffset += m.uv.Length;
+            _vertexOffset += m.vertices.Length;
+            _normalOffset += m.normals.Length;
+            _uvOffset += m.uv.Length;
 
             return sb.ToString();
         }
 
         private static void Clear()
         {
-            vertexOffset = 0;
-            normalOffset = 0;
-            uvOffset = 0;
+            _vertexOffset = 0;
+            _normalOffset = 0;
+            _uvOffset = 0;
         }
 
         private static Dictionary<string, ObjMaterial> PrepareFileWrite()
@@ -202,7 +202,7 @@ namespace EditorUtility.Core
         {
             try
             {
-                System.IO.Directory.CreateDirectory(targetFolder);
+                System.IO.Directory.CreateDirectory(_targetFolder);
             }
             catch
             {
@@ -218,8 +218,8 @@ namespace EditorUtility.Core
             //        if (!CreateTargetFolder())
             //            return;
 
-            global::EditorUtility.Core.OBJExport.targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
-            if (!string.IsNullOrEmpty(targetFolder))
+            global::EditorUtility.Core.OBJExport._targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
+            if (!string.IsNullOrEmpty(_targetFolder))
             {
                 Transform[] selection = Selection.GetTransforms(SelectionMode.Editable | SelectionMode.ExcludePrefab);
 
@@ -260,7 +260,7 @@ namespace EditorUtility.Core
                     if (stripIndex >= 0)
                         filename = filename.Substring(stripIndex + 1).Trim();
 
-                    MeshesToFile(mf, targetFolder, filename);
+                    MeshesToFile(mf, _targetFolder, filename);
 
                     UnityEditor.EditorUtility.DisplayDialog("Objects exported", "Exported " + exportedObjects + " objects to " + filename, "");
                 }
@@ -277,8 +277,8 @@ namespace EditorUtility.Core
             //        if (!CreateTargetFolder())
             //            return;
 
-            global::EditorUtility.Core.OBJExport.targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
-            if (!string.IsNullOrEmpty(targetFolder))
+            global::EditorUtility.Core.OBJExport._targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
+            if (!string.IsNullOrEmpty(_targetFolder))
             {
                 Transform[] selection = Selection.GetTransforms(SelectionMode.Editable | SelectionMode.ExcludePrefab);
 
@@ -303,7 +303,7 @@ namespace EditorUtility.Core
                         mf[m] = (MeshFilter)meshfilter[m];
                     }
 
-                    MeshesToFile(mf, targetFolder, selection[i].name + "_" + i);
+                    MeshesToFile(mf, _targetFolder, selection[i].name + "_" + i);
                 }
 
                 if (exportedObjects > 0)

@@ -4,10 +4,6 @@ namespace EditorUtility.Core
 {
     public class GlobalInput : MonoBehaviour
     {
-        #region Variables
-        #endregion
-
-
         #region Methods
         // Use this for initialization
         void Start()

@@ -12,8 +12,8 @@ namespace EditorUtility.Core
         #region Variables
         static ProjectFoldersWindow m_Win;
 
-        string m_wantedRootName = "Game";
-        string m_dialogName = "Project Setup";
+        private string _wantedRootName = "Game";
+        private string _dialogName = "Project Setup";
         #endregion
 
         #region Main Methods
@@ -27,7 +27,7 @@ namespace EditorUtility.Core
         {
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("Game Name: ", EditorStyles.boldLabel);
-            m_wantedRootName = EditorGUILayout.TextField(m_wantedRootName);
+            _wantedRootName = EditorGUILayout.TextField(_wantedRootName);
             EditorGUILayout.EndHorizontal();
 
             if (GUILayout.Button("Create Folder Structure", GUILayout.ExpandWidth(true), GUILayout.Height(32)))
@@ -48,13 +48,13 @@ namespace EditorUtility.Core
         #region Custom Methods
         private void CreateRootFolder()
         {
-            if (m_wantedRootName == "" || m_wantedRootName == null)
+            if (_wantedRootName == "" || _wantedRootName == null)
             {
                 DialogDisplay("Please Provide a Proper Game Name");
                 return;
             }
 
-            if (m_wantedRootName == "Game")
+            if (_wantedRootName == "Game")
             {
                 DialogDisplay("Do you really want to name this game..Game?");
                 return;
@@ -62,7 +62,7 @@ namespace EditorUtility.Core
 
             Debug.Log("Creating Root Folder...");
             string assetFolder = Application.dataPath;
-            string rootName = assetFolder + "/" + m_wantedRootName;
+            string rootName = assetFolder + "/" + _wantedRootName;
 
             DirectoryInfo rootInfo = Directory.CreateDirectory(rootName);
 
@@ -161,13 +161,13 @@ namespace EditorUtility.Core
 
             //Create the Base Level Scenes needed for a simple game
             Scene curFrontendScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
-            EditorSceneManager.SaveScene(curFrontendScene, "Assets/" + m_wantedRootName + "/Scenes/" + m_wantedRootName + "_Frontend.unity", true);
+            EditorSceneManager.SaveScene(curFrontendScene, "Assets/" + _wantedRootName + "/Scenes/" + _wantedRootName + "_Frontend.unity", true);
 
             Scene curMainScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
-            EditorSceneManager.SaveScene(curMainScene, "Assets/" + m_wantedRootName + "/Scenes/" + m_wantedRootName + "_Main.unity", true);
+            EditorSceneManager.SaveScene(curMainScene, "Assets/" + _wantedRootName + "/Scenes/" + _wantedRootName + "_Main.unity", true);
 
             Scene curStartupScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
-            EditorSceneManager.SaveScene(curStartupScene, "Assets/" + m_wantedRootName + "/Scenes/" + m_wantedRootName + "_Startup.unity", true);
+            EditorSceneManager.SaveScene(curStartupScene, "Assets/" + _wantedRootName + "/Scenes/" + _wantedRootName + "_Startup.unity", true);
 
         }
 
@@ -181,7 +181,7 @@ namespace EditorUtility.Core
 
         private void DialogDisplay(string aMessage)
         {
-            UnityEditor.EditorUtility.DisplayDialog(m_dialogName + "Warning", aMessage, "OK");
+            UnityEditor.EditorUtility.DisplayDialog(_dialogName + "Warning", aMessage, "OK");
         }
         #endregion
     }

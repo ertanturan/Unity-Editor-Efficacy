@@ -8,32 +8,31 @@ namespace EditorUtility.Core
     {
         #region Variables
         [Header("Switcher Properties")]
-        public float switchTime = 2f;
+        public float SwitchTime = 2f;
 
-        private List<Camera> cameras = new List<Camera>();
-        private int currentCameraID;
-        private float lastSwitchTime = 0f;
+        private List<Camera> _cameras = new List<Camera>();
+        private int _currentCameraID;
+        private float _lastSwitchTime = 0f;
         #endregion
-
 
         #region BuiltIn Methods
         // Use this for initialization
         void Start()
         {
-            cameras = gameObject.GetComponentsInChildren<Camera>().ToList<Camera>();
-            currentCameraID = 0;
+            _cameras = gameObject.GetComponentsInChildren<Camera>().ToList<Camera>();
+            _currentCameraID = 0;
             SwitchCamera();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Time.time >= lastSwitchTime + switchTime)
+            if (Time.time >= _lastSwitchTime + SwitchTime)
             {
-                currentCameraID++;
-                if (currentCameraID >= cameras.Count)
+                _currentCameraID++;
+                if (_currentCameraID >= _cameras.Count)
                 {
-                    currentCameraID = 0;
+                    _currentCameraID = 0;
                 }
 
                 SwitchCamera();
@@ -41,17 +40,16 @@ namespace EditorUtility.Core
         }
         #endregion
 
-
         #region Custom Methods
         void SwitchCamera()
         {
-            for (int i = 0; i < cameras.Count; i++)
+            for (int i = 0; i < _cameras.Count; i++)
             {
-                cameras[i].gameObject.SetActive(false);
+                _cameras[i].gameObject.SetActive(false);
             }
-            cameras[currentCameraID].gameObject.SetActive(true);
+            _cameras[_currentCameraID].gameObject.SetActive(true);
 
-            lastSwitchTime = Time.time;
+            _lastSwitchTime = Time.time;
         }
         #endregion
     }
