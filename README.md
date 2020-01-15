@@ -12,11 +12,11 @@ This project serves as an internal localization system for unity-based projects 
 - Creating whole folder structure of a project with only one click .
 - Creating 'Level Manager' hierarchy with one click.
 - Grouping selected objects inside the hierarchy.
--Creating Game Manager.
--Creating Global Input.
--Replacing an object from assets with another object from hierarchy.
--Exporting selected gameobject as a single .obj or exporting each selected gameobjects as different .obj files.
--Creating UI Canvas group with '[ReusableUI](https://github.com/ertanturan/Unity-Reusable-UI "") ' attached.
+- Creating Game Manager.
+- Creating Global Input.
+- Replacing an object from assets with another object from hierarchy.
+- Exporting selected gameobject as a single .obj or exporting each selected gameobjects as different .obj files.
+- Creating UI Canvas group with '[ReusableUI](https://github.com/ertanturan/Unity-Reusable-UI "") ' attached.
 
 
 ## Usage
