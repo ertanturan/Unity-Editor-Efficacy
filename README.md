@@ -32,6 +32,21 @@ This project serves as an internal localization system for unity-based projects 
 1. Click 'Editor Utility>Scene Tools>Create Level Group'.
 2. Level group created in hierarchy.
 
+### Grouping/Ungrouping Selected Objects In Hierarchy
+
+1. Select two objects in hierarchy.
+2. Click 'Editor Utility>Scene Tools>Group Selected'
+3. A window will be opened. Set a group name there.
+4. Click 'Group Selected' .
+5. Done !
+
+#### For ungrouping
+
+1. Select only the parent object.
+2. Click 'Editor Utility>Scene Tools>Group Selected'
+3. A window will be opened. Click 'UnGroup Selection' there.
+4. Done !
+
 
 
 
