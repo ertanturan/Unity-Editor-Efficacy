@@ -1,4 +1,4 @@
-# Unity-Localization
+# Unity-Editor-Utility
 
 This project serves as an internal localization system for unity-based projects including right-to-left (RTLL) translation support.
 
@@ -9,9 +9,9 @@ This project serves as an internal localization system for unity-based projects 
 3. Import it to your unity project.
 
 ## Features
--Creating whole folder structure of a project with only one click .
--Creating 'Level Manager' hierarchy with one click.
--Grouping selected objects inside the hierarchy.
+- Creating whole folder structure of a project with only one click .
+- Creating 'Level Manager' hierarchy with one click.
+- Grouping selected objects inside the hierarchy.
 -Creating Game Manager.
 -Creating Global Input.
 -Replacing an object from assets with another object from hierarchy.
