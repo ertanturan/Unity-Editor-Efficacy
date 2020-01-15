@@ -21,6 +21,13 @@ This project serves as an internal localization system for unity-based projects 
 
 ## Usage
 
+### Creating folder structure
+
+1. Click 'Editor Utility>Project Tools>Create Project Folders' .
+2. Type a game name then click 'Create Folder Structure'.
+3. Folder structure has been created ! . View it in Assets folder.
+
+
 
 
 ## Video Tutorial
