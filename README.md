@@ -10,7 +10,7 @@ This project serves as an internal localization system for unity-based projects 
 
 ## Features
 - Creating whole folder structure of a project with only one click .
-- Creating 'Level Manager' hierarchy with one click.
+- Creating 'Level Group' hierarchy with one click.
 - Grouping selected objects inside the hierarchy.
 - Creating Game Manager.
 - Creating Global Input.
@@ -21,11 +21,16 @@ This project serves as an internal localization system for unity-based projects 
 
 ## Usage
 
-### Creating folder structure
+### Creating Folder Structure
 
 1. Click 'Editor Utility>Project Tools>Create Project Folders' .
 2. Type a game name then click 'Create Folder Structure'.
-3. Folder structure has been created ! . View it in Assets folder.
+3. Folder structure has been created in Assets folder.
+
+### Creating Level Manager
+
+1. Click 'Editor Utility>Scene Tools>Create Level Group'.
+2. Level group created in hierarchy.
 
 
 
