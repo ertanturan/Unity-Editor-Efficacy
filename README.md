@@ -43,9 +43,16 @@ This project serves as an internal localization system for unity-based projects 
 #### For ungrouping
 
 1. Select only the parent object.
-2. Click 'Editor Utility>Scene Tools>Group Selected'
+2. Click `Editor Utility>Scene Tools>Group Selected`
 3. A window will be opened. Click 'UnGroup Selection' there.
 4. Done !
+
+### Creating Input
+1. Click `Editor Utility>Scene Tools>Create Inputs`.
+2. A gameobject created in hierarchy with the `Global Input` script attached.
+
+### Creating Game Manager
+
 
 
 
