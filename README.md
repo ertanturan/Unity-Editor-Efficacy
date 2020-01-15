@@ -71,7 +71,10 @@ This project serves as an internal localization system for unity-based projects 
 3. Choose `Export Selected to single OBJ` or `Export Each Selected to OBJ` as you wish.
 4. Set a destination and a new name for the .obj in the opened file dialog.
 
+### Creating UI Group
 
+1. Click `Editor Utility>UI Tools>Create UI Canvas Grp`
+2. UI Canvas Group created inside the hierarchy window .
 
 
 # Video Tutorial
