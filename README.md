@@ -50,14 +50,20 @@ This project serves as an internal localization system for unity-based projects 
 
 
 
-## Video Tutorial
+# Video Tutorial
 
 Will be added soon.
 
-## Contributing
+# Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+
+
+
+
+
 
 
 # ENJOY !
