@@ -52,7 +52,24 @@ This project serves as an internal localization system for unity-based projects 
 2. A gameobject created in hierarchy with the `Global Input` script attached.
 
 ### Creating Game Manager
+1. Click `Editor Utility>Scene Tools>Create Game Manager`.
+2. A gameobject created in hierarchy with the `Game Manager` script attached.
 
+### Object Replacement
+
+1. Click `Editor Utility>Scene Tools>Object Replacement`.
+2. A new window will be opened. You can observe selected object count there.
+3. Select a target object then press `Replace Selected` . 
+4. Done !.
+  !! Note that each selected object in hierarchy will be replaced by the target object.!! 
+  
+### Exporting .obj
+
+
+1. Select object(s) from hierarchy.
+2. Head to `Editor Utility>Level Tools`
+3. Choose `Export Selected to single OBJ` or `Export Each Selected to OBJ` as you wish.
+4. Set a destination and a new name for the .obj in the opened file dialog.
 
 
 
