@@ -23,19 +23,19 @@ This project serves as an internal localization system for unity-based projects 
 
 ### Creating Folder Structure
 
-1. Click 'Editor Utility>Project Tools>Create Project Folders' .
-2. Type a game name then click 'Create Folder Structure'.
+1. Click `Editor Utility>Project Tools>Create Project Folders` .
+2. Type a game name then click `Create Folder Structure`.
 3. Folder structure has been created in Assets folder.
 
 ### Creating Level Manager
 
-1. Click 'Editor Utility>Scene Tools>Create Level Group'.
+1. Click `Editor Utility>Scene Tools>Create Level Group`.
 2. Level group created in hierarchy.
 
 ### Grouping/Ungrouping Selected Objects In Hierarchy
 
 1. Select two objects in hierarchy.
-2. Click 'Editor Utility>Scene Tools>Group Selected'
+2. Click `Editor Utility>Scene Tools>Group Selected`
 3. A window will be opened. Set a group name there.
 4. Click 'Group Selected' .
 5. Done !
