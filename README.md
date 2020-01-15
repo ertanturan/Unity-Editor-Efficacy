@@ -1,6 +1,6 @@
 # Unity-Editor-Utility
 
-This project serves as an internal localization system for unity-based projects including right-to-left (RTLL) translation support.
+The tool will speed up your workfloe inside unity editor. 
 
 ## Import
 
