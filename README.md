@@ -4,7 +4,7 @@ This project serves as an internal localization system for unity-based projects 
 
 ## Import
 
-1. Go to [release](https://github.com/ertanturan/Unity-Localization/releases) page.
+1. Go to [release](https://github.com/ertanturan/Unity-Editor-Utility/releases) page.
 2. Download the lates release of the package.
 3. Import it to your unity project.
 
