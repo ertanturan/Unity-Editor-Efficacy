@@ -6,19 +6,22 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Toggle))]
 public class ToggleComponent : MonoBehaviour
 {
-    private UnityAction _actionValueChange;
+    private UnityAction<bool> _actionValueChange;
+    private Toggle _toggle;
 
-    // Start is called bef
-    //
-    // ore the first frame update
-    void Start()
+
+    protected virtual void Awake()
     {
+        _actionValueChange += OnValueChange;
+        _toggle = GetComponent<Toggle>();
 
+        _toggle.onValueChanged.AddListener(_actionValueChange);
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void OnValueChange(bool value)
     {
-
+        Debug.Log("Toggle value changed -base-");
     }
+
+
 }
