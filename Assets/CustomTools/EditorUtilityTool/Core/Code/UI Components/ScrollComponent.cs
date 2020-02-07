@@ -14,7 +14,7 @@ public class ScrollComponent : MonoBehaviour
     protected virtual void Awake()
     {
         _actionValueChange += OnValueChange;
-
+        _scrollRect = GetComponent<ScrollRect>();
         _scrollRect.onValueChanged.AddListener(OnValueChange);
     }
 
