@@ -8,15 +8,15 @@ public class ButtonComponent : MonoBehaviour
 
     private Button _button;
 
-    private UnityAction ActionButtonClick;
+    private UnityAction _actionButtonClick;
 
     protected virtual void Awake()
     {
 
-        ActionButtonClick += OnButtonClick;
+        _actionButtonClick += OnButtonClick;
 
         _button = GetComponent<Button>();
-        _button.onClick.AddListener(ActionButtonClick);
+        _button.onClick.AddListener(_actionButtonClick);
     }
 
     protected virtual void OnButtonClick()
