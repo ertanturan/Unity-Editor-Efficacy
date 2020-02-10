@@ -19,6 +19,7 @@ The tool will speed up your workfloe inside unity editor.
 - Creating UI Canvas group with '[ReusableUI](https://github.com/ertanturan/Unity-Reusable-UI "") ' attached.
 
 ## Currently Ongoing Developments
+- OOP-based reusable C# &Unity UI Component system
 
 ## Usage
 
