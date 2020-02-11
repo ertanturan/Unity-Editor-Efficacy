@@ -23,13 +23,13 @@ The tool will speed up your workflow inside unity editor.
 
 ## Usage
 
-### Creating Folder Structure
+### 1. Creating Folder Structure
 
 1. Click `Editor Utility>Project Tools>Create Project Folders` .
 2. Type a game name then click `Create Folder Structure`.
 3. Folder structure has been created in Assets folder.
 
-### Creating Level Manager
+### 2. Creating Level Manager
 
 1. Click `Editor Utility>Scene Tools>Create Level Group`.
 2. Level group created in hierarchy.
