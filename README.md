@@ -1,6 +1,6 @@
 # Unity-Editor-Utility
 
-The tool will speed up your workfloe inside unity editor. 
+The tool will speed up your workflow inside unity editor. 
 
 ## Import
 
