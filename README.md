@@ -34,30 +34,30 @@ The tool will speed up your workflow inside unity editor.
 1. Click `Editor Utility>Scene Tools>Create Level Group`.
 2. Level group created in hierarchy.
 
-### Grouping/Ungrouping Selected Objects In Hierarchy
-
+### 3. Grouping/Ungrouping Selected Objects In Hierarchy
+#### 3.1 Grouping
 1. Select two objects in hierarchy.
 2. Click `Editor Utility>Scene Tools>Group Selected`
 3. A window will be opened. Set a group name there.
 4. Click 'Group Selected' .
 5. Done !
 
-#### For ungrouping
+#### 3.2 Ungrouping
 
 1. Select only the parent object.
 2. Click `Editor Utility>Scene Tools>Group Selected`
 3. A window will be opened. Click 'UnGroup Selection' there.
 4. Done !
 
-### Creating Input
+### 4. Creating Input
 1. Click `Editor Utility>Scene Tools>Create Inputs`.
 2. A gameobject created in hierarchy with the `Global Input` script attached.
 
-### Creating Game Manager
+### 5. Creating Game Manager
 1. Click `Editor Utility>Scene Tools>Create Game Manager`.
 2. A gameobject created in hierarchy with the `Game Manager` script attached.
 
-### Object Replacement
+### 6. Object Replacement
 
 1. Click `Editor Utility>Scene Tools>Object Replacement`.
 2. A new window will be opened. You can observe selected object count there.
@@ -65,7 +65,7 @@ The tool will speed up your workflow inside unity editor.
 4. Done !.
   !! Note that each selected object in hierarchy will be replaced by the target object.!! 
   
-### Exporting .obj
+### 7. Exporting .obj
 
 
 1. Select object(s) from hierarchy.
@@ -73,7 +73,7 @@ The tool will speed up your workflow inside unity editor.
 3. Choose `Export Selected to single OBJ` or `Export Each Selected to OBJ` as you wish.
 4. Set a destination and a new name for the .obj in the opened file dialog.
 
-### Creating UI Group
+### 8. Creating UI Group
 
 1. Click `Editor Utility>UI Tools>Create UI Canvas Grp`
 2. UI Canvas Group created inside the hierarchy window .
