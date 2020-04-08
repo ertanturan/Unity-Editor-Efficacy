@@ -11,10 +11,10 @@ The tool will speed up your workflow inside unity editor.
 ## Features
 - Creating whole folder structure of a project with only one click .
 - Creating 'Level Group' hierarchy with one click.
-- Grouping selected objects inside the hierarchy.
+- Grouping selected objects inside the hierarchy with one click.
 - Creating Game Manager.
 - Creating Global Input.
-- Replacing an object from assets with another object from hierarchy.
+- Replacing an object from assets with another object from hierarchy with one clicks.
 - Exporting selected gameobject as a single .obj or exporting each selected gameobjects as different .obj files.
 - Creating UI Canvas group with '[ReusableUI](https://github.com/ertanturan/Unity-Reusable-UI "") ' attached.
 
