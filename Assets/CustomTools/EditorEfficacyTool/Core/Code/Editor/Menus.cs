@@ -14,17 +14,7 @@ namespace EditorEfficacy.Core
         #endregion
 
         #region Scene Helpers Menus
-        [MenuItem("Editor Utility/Scene Tools/Create Game Manager")]
-        public static void CreateGameManager()
-        {
-            SceneHelpers.CreateGameManager();
-        }
 
-        [MenuItem("GameObject/Editor-Utility/Create Game Manager", false, 11)]
-        public static void ContextCreateGameManager()
-        {
-            SceneHelpers.CreateGameManager();
-        }
 
         [MenuItem("Editor Utility/Scene Tools/Group Selected")]
         public static void GroupSelectedGameObjects()
@@ -56,17 +46,7 @@ namespace EditorEfficacy.Core
             SceneHelpers.CreateLevelGroup();
         }
 
-        [MenuItem("Editor Utility/Scene Tools/Create Inputs")]
-        public static void CreateInputs()
-        {
-            SceneHelpers.CreateInputs();
-        }
 
-        [MenuItem("GameObject/Editor-Utility/Create Global Input", false, 11)]
-        public static void ContextCreateInputs()
-        {
-            SceneHelpers.CreateInputs();
-        }
         #endregion
 
         #region Level Tools

@@ -23,26 +23,9 @@ namespace EditorEfficacy.Core
             Selection.activeGameObject = levelGrp;
         }
 
-        public static void CreateGameManager()
-        {
-            //Create the main Level Manager Group
-            GameObject gmGO = new GameObject("Game_Manager");
-            gmGO.AddComponent<GameManager>();
 
-            //Select the Level Manager
-            Selection.activeGameObject = gmGO;
-        }
 
-        public static void CreateInputs()
-        {
-            //Create the main Level Manager Group
-            GameObject inputGO = new GameObject("Input");
-            inputGO.AddComponent<GlobalInput>();
 
-            //Select the Level Manager
-            Selection.activeGameObject = inputGO;
-
-        }
         #endregion
 
         #region Utility Methods
