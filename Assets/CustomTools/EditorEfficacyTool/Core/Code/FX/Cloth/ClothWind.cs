@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     [RequireComponent(typeof(Cloth))]
     public class ClothWind : MonoBehaviour

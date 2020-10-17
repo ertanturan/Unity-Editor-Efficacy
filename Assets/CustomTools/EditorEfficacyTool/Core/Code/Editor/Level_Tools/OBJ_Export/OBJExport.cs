@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     struct ObjMaterial
     {
@@ -218,7 +218,7 @@ namespace EditorUtility.Core
             //        if (!CreateTargetFolder())
             //            return;
 
-            global::EditorUtility.Core.OBJExport._targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
+            global::EditorEfficacy.Core.OBJExport._targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
             if (!string.IsNullOrEmpty(_targetFolder))
             {
                 Transform[] selection = Selection.GetTransforms(SelectionMode.Editable | SelectionMode.ExcludePrefab);
@@ -277,7 +277,7 @@ namespace EditorUtility.Core
             //        if (!CreateTargetFolder())
             //            return;
 
-            global::EditorUtility.Core.OBJExport._targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
+            global::EditorEfficacy.Core.OBJExport._targetFolder = UnityEditor.EditorUtility.SaveFilePanel("Export OBJ", Application.dataPath, "EnterName", "obj");
             if (!string.IsNullOrEmpty(_targetFolder))
             {
                 Transform[] selection = Selection.GetTransforms(SelectionMode.Editable | SelectionMode.ExcludePrefab);

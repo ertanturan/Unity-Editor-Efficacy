@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public class GlobalInput : MonoBehaviour
     {

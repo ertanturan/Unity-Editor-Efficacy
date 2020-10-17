@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EditorUtility
+namespace EditorEfficacy
 {
     public class RotateAroundPointUtil : MonoBehaviour
     {

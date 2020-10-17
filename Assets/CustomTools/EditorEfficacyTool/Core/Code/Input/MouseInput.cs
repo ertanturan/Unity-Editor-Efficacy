@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public class MouseInput : MonoBehaviour
     {

@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public class CameraSwitcherUtil : MonoBehaviour
     {

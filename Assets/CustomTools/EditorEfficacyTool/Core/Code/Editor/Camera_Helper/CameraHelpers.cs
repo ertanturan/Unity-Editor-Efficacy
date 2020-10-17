@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
 #if UNITY_EDITOR
     public static class CameraHelpers

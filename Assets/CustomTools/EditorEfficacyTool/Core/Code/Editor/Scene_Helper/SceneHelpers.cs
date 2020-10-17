@@ -3,7 +3,7 @@ using UnityEngine;
 //using Emortal.Gameplay;
 
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public static class SceneHelpers
     {

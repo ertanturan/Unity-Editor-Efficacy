@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace EditorUtility.UI
+namespace EditorEfficacy.UI
 {
     public class OnClickID : UnityEvent<int> { }
 

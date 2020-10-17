@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public class Menus
     {

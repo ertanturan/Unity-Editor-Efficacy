@@ -5,7 +5,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public class ProjectFoldersWindow : BaseWindow
     {

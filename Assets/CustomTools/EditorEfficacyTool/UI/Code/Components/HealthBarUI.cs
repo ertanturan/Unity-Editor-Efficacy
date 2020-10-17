@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EditorUtility.UI
+namespace EditorEfficacy.UI
 {
     public class HealthBarUI : MonoBehaviour
     {

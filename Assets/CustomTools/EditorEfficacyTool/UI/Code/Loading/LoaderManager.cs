@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     public class LoaderManager : MonoBehaviour
     {

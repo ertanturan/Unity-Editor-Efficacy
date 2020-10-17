@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace EditorUtility.Core
+namespace EditorEfficacy.Core
 {
     [CustomEditor(typeof(MouseInput))]
     public class MouseInputEditor : Editor
