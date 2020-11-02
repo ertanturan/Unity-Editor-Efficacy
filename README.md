@@ -79,9 +79,6 @@ The tool will speed up your workflow inside unity editor.
 2. UI Canvas Group created inside the hierarchy window .
 
 
-# Video Tutorial
-
-Will be added soon.
 
 # Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
